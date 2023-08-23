@@ -9,3 +9,10 @@
 
     baz(); // Hello
 */
+
+Function.prototype.bind = function(context){
+    const fn = this;
+    return function(){
+        fn.call(context);
+    }
+}
